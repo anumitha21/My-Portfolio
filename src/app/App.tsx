@@ -1,7 +1,7 @@
 import { Hero } from "@/app/components/Hero";
 import { About } from "@/app/components/About";
-import { Education } from "@/app/components/Education";
 import { Skills } from "@/app/components/Skills";
+import { Certificates } from "@/app/components/Certificates";
 import { Projects } from "@/app/components/Projects";
 import { Experience } from "@/app/components/Experience";
 import { Contact } from "@/app/components/Contact";
@@ -18,7 +18,7 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
-        <Education />
+        <Certificates />
         <Experience />
         <Contact />
       </main>

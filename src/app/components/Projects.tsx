@@ -8,31 +8,31 @@ import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 
 const projects = [
   {
-    title: "AI Chatbot Assistant",
+    title: "AutoBlogX",
     description:
-      "Developed an intelligent chatbot using LangChain and OpenAI API with context-aware responses and memory management. Implemented RAG for accurate information retrieval.",
-    image: "https://images.unsplash.com/photo-1757310998437-b2e8a7bd2e97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMGNoYXRib3QlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzY4NTU2OTg0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Python", "LangChain", "OpenAI", "Streamlit"],
-    github: "#",
-    demo: "#",
+      "An AI-powered automated blogging platform that generates, structures, and publishes content with minimal human intervention. The system leverages intelligent pipelines to transform ideas into complete blog posts, enabling scalable content creation workflows.",
+    //image: "https://images.unsplash.com/photo-1757310998437-b2e8a7bd2e97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMGNoYXRib3QlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzY4NTU2OTg0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    tags: ["LangChain", "Groq", "FastAPI","LangGraph"],
+    github: "https://github.com/anumitha21/AutoBlogX",
+    
   },
   {
-    title: "Sentiment Analysis Model",
+    title: "Policy-Compilance",
     description:
-      "Built a sentiment analysis system using NLP techniques and deep learning. Achieved 92% accuracy on customer reviews dataset with BERT-based transformer model.",
-    image: "https://images.unsplash.com/photo-1529078155058-5d716f45d604?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBkYXRhfGVufDF8fHx8MTc2ODUxMDc2Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["PyTorch", "BERT", "NLP", "FastAPI"],
-    github: "#",
-    demo: "#",
+      "A production-style AI system designed to analyze contracts against policy documents using a RAG-based pipeline. It performs retrieval, re-ranking, reasoning, and risk scoring to classify compliance, providing explainable outputs with citations and confidence scores.",
+    //image: "https://images.unsplash.com/photo-1529078155058-5d716f45d604?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBkYXRhfGVufDF8fHx8MTc2ODUxMDc2Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    tags: ["LangChain","LangGraph","ChromaDB ",
+         "BM25","Cross-Encoder Reranker","Groq (LLM)","FastAPI"],
+    github: "https://github.com/anumitha21/Policy-Compilance",
+    
   },
   {
-    title: "Neural Network Visualizer",
-    description:
-      "Created an interactive tool to visualize neural network architectures and training processes. Helps understand deep learning models with real-time updates.",
-    image: "https://images.unsplash.com/photo-1761740533449-b8d4385e60b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXVyYWwlMjBuZXR3b3JrJTIwdmlzdWFsaXphdGlvbnxlbnwxfHx8fDE3Njg1ODU2NTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Python", "TensorFlow", "Gradio", "NumPy"],
-    github: "#",
-    demo: "#",
+    title: "SkyFlow-ETL",
+    description:"SkyFlow ETL is an Apache Airflow-based data pipeline project designed to demonstrate real-world ETL orchestration. It extracts data from external APIs, transforms it into structured formats, and loads it into a PostgreSQL database.",
+    //image: "https://images.unsplash.com/photo-1761740533449-b8d4385e60b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXVyYWwlMjBuZXR3b3JrJTIwdmlzdWFsaXphdGlvbnxlbnwxfHx8fDE3Njg1ODU2NTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    tags: ["Apache Airflow", "Open-Meteo API,","Open Notify API", "PostgreSQL", "Docker"],
+    github: "https://github.com/anumitha21/SkyFlow-ETL",
+    
   },
 ];
 
@@ -96,14 +96,8 @@ export function Projects() {
                         <Github className="mr-2 h-4 w-4" />
                         Code
                       </Button>
-                      <Button
-                        size="sm"
-                        className="flex-1 bg-primary hover:bg-primary/90"
-                        onClick={() => window.open(project.demo, "_blank")}
-                      >
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Demo
-                      </Button>
+                      
+                        
                     </div>
                   </div>
                 </Card>
