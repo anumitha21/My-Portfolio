@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { Github, Linkedin, Download, ArrowDown } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 import profileImage from "@/imports/image-0.png";
-import resumePDF from "@/imports/Anumitha V.pdf";
+import resumePDF from "@/imports/Anumitha_resume.pdf";
 import { BackgroundEffects } from "@/app/components/BackgroundEffects";
 
 const ROLE = "Passionate AI & Data Engineer";

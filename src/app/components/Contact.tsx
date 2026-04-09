@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Mail, Linkedin, Github, Download } from "lucide-react";
-import resumePDF from "@/imports/Anumitha V.pdf";
+import resumePDF from "@/imports/Anumitha_resume.pdf";
 import { BackgroundEffects } from "@/app/components/BackgroundEffects";
 
 const links = [
