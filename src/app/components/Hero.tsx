@@ -64,7 +64,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}
             >
-              <span className="bg-[#8000b2] text-[#ffffff] font-black text-3xl sm:text-4xl px-4 py-1.5 rounded-xl inline-flex items-center gap-1">
+              <span className="bg-[#690092] text-[#ffffff] font-black text-3xl sm:text-4xl px-4 py-1.5 rounded-xl inline-flex items-center gap-1">
                 {displayed}
                 <motion.span
                   animate={{ opacity: [1, 0] }}
@@ -90,9 +90,9 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.55 }}
             >
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(128,0,178,0.5)" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(105,0,146,0.5)" }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-[#8000b2] text-white font-bold px-8 py-3 rounded-xl text-base"
+                className="bg-[#690092] text-white font-bold px-8 py-3 rounded-xl text-base"
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Contact Me
@@ -100,9 +100,9 @@ export function Hero() {
               <motion.a
                 href={resumePDF}
                 download="Anumitha_V_Resume.pdf"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(128,0,178,0.3)" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(105,0,146,0.3)" }}
                 whileTap={{ scale: 0.97 }}
-                className="border-2 border-[#8000b2] text-white hover:bg-[#8000b2] font-bold px-8 py-3 rounded-xl text-base flex items-center gap-2 transition-all duration-200"
+                className="border-2 border-[#690092] text-white hover:bg-[#690092] font-bold px-8 py-3 rounded-xl text-base flex items-center gap-2 transition-all duration-200"
               >
                 <Download className="h-4 w-4" /> Download CV
               </motion.a>
@@ -128,7 +128,7 @@ export function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7 + i * 0.1 }}
-                  className="w-12 h-12 flex items-center justify-center rounded-full bg-[#8000b2]/20 border-2 border-[#8000b2] text-white hover:bg-[#8000b2] transition-all shadow-lg"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-[#690092]/20 border-2 border-[#690092] text-white hover:bg-[#690092] transition-all shadow-lg"
                 >
                   <Icon className="h-5 w-5" />
                 </motion.a>
@@ -151,20 +151,20 @@ export function Hero() {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               />
               <motion.div
-                className="absolute -inset-8 rounded-3xl border border-[#8000b2]/40"
+                className="absolute -inset-8 rounded-3xl border border-[#690092]/40"
                 animate={{ rotate: [0, -2, 0, 2, 0] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               />
               {/* Yellow offset card */}
               <motion.div
-                className="absolute -bottom-5 -right-5 w-full h-full bg-[#8000b2]/20 rounded-3xl border-2 border-[#8000b2]"
+                className="absolute -bottom-5 -right-5 w-full h-full bg-[#690092]/20 rounded-3xl border-2 border-[#690092]"
                 animate={{ x: [0, 3, 0], y: [0, 3, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
               <motion.div
-                whileHover={{ scale: 1.03, boxShadow: "0 0 40px rgba(128,0,178,0.4)" }}
+                whileHover={{ scale: 1.03, boxShadow: "0 0 40px rgba(105,0,146,0.4)" }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-3xl overflow-hidden border-2 border-[#8000b2]/60 shadow-2xl"
+                className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-2 border-[#690092]/60 shadow-2xl"
               >
                 <img src={profileImage} alt="Anumitha V" className="w-full h-full object-cover" />
                 {/* Shimmer overlay */}
@@ -198,7 +198,6 @@ export function Hero() {
     </section>
   );
 }
-
 
 
 

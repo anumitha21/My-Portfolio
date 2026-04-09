@@ -19,7 +19,7 @@ export default function App() {
         {/* Wave divider */}
         <div className="bg-[#121212] overflow-hidden -mb-1">
           <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
-            <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#8000b2" fillOpacity="0.15" />
+            <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#690092" fillOpacity="0.15" />
           </svg>
         </div>
         <About />
@@ -59,6 +59,5 @@ export default function App() {
     </div>
   );
 }
-
 
 
