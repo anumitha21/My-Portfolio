@@ -50,7 +50,7 @@ export function Contact() {
             );
           })}
 
-          <motion.a href={resumePDF} download="Anumitha_V_Resume.pdf"
+          <motion.a href={resumePDF} download="Anumitha_resume.pdf"
             initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.55 }}
             whileHover={{ scale: 1.04, boxShadow: "0 0 30px rgba(105,0,146,0.5)" }} whileTap={{ scale: 0.97 }}

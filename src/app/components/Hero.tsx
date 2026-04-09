@@ -99,7 +99,7 @@ export function Hero() {
               </motion.button>
               <motion.a
                 href={resumePDF}
-                download="Anumitha_V_Resume.pdf"
+                download="Anumitha_resume.pdf"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(105,0,146,0.3)" }}
                 whileTap={{ scale: 0.97 }}
                 className="border-2 border-[#690092] text-white hover:bg-[#690092] font-bold px-8 py-3 rounded-xl text-base flex items-center gap-2 transition-all duration-200"
