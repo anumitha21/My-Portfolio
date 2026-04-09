@@ -23,7 +23,7 @@ export function Footer() {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-primary/30 text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-all"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-primary/30 text-muted-foreground hover:bg-primary hover:text-background hover:border-primary transition-all"
               aria-label="GitHub"
             >
               <Github className="h-5 w-5" />
@@ -32,14 +32,14 @@ export function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-primary/30 text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-all"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-primary/30 text-muted-foreground hover:bg-primary hover:text-background hover:border-primary transition-all"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a
               href="mailto:anumitha@example.com"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-primary/30 text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-all"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-primary/30 text-muted-foreground hover:bg-primary hover:text-background hover:border-primary transition-all"
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />

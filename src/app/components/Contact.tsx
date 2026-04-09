@@ -13,14 +13,12 @@ const links = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/anumitha-v",
-    href: "https://linkedin.com/in/anumitha-v",
+    href: "https://www.linkedin.com/in/anumitha-v-1a5b29313/",
     icon: Linkedin,
   },
   {
     label: "GitHub",
-    value: "github.com/anumitha",
-    href: "https://github.com/anumitha",
+    href: "https://github.com/anumitha21",
     icon: Github,
   },
 ];

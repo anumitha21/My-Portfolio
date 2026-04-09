@@ -6,8 +6,27 @@ import resumePDF from "@/imports/Anumitha V.pdf";
 
 export function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
-      <div className="max-w-7xl mx-auto w-full">
+    <section id="home" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">
+      {/* Animated floating orbs */}
+      <motion.div
+        className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full blur-[120px] opacity-20 pointer-events-none"
+        style={{ background: "#4DBBCF" }}
+        animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full blur-[100px] opacity-15 pointer-events-none"
+        style={{ background: "#FED43A" }}
+        animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
+        transition={{ duration: 13, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute top-3/4 left-1/2 w-48 h-48 rounded-full blur-[80px] opacity-10 pointer-events-none"
+        style={{ background: "#4DBBCF" }}
+        animate={{ x: [0, 20, 0], y: [0, -20, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <div className="relative max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <motion.div
@@ -113,7 +132,8 @@ export function Hero() {
             className="order-1 lg:order-2 flex justify-center"
           >
             <div className="relative w-96 h-96 lg:w-[28rem] lg:h-[28rem] mx-auto">
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl" />
+              <div className="absolute inset-0 rounded-full blur-3xl opacity-30" style={{ background: "radial-gradient(circle, #4DBBCF 0%, #FED43A 100%)" }} />
+              <div className="absolute -inset-1 rounded-full blur-xl opacity-20" style={{ background: "#4DBBCF" }} />
               <img
                 src={profileImage}
                 alt="Anumitha V - AI Developer"
