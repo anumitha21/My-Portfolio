@@ -65,7 +65,7 @@ export function Hero() {
           {/* Left */}
           <div className="order-2 lg:order-1">
             <motion.p
-              className="text-[#0a1628]/60 text-sm font-bold mb-3 tracking-[0.3em] uppercase"
+              className="text-[#0a1628]/60 text-base font-black mb-3 tracking-[0.25em] uppercase"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -74,7 +74,7 @@ export function Hero() {
             </motion.p>
 
             <motion.h1
-              className="text-6xl sm:text-7xl lg:text-8xl font-black text-[#0a1628] mb-4 leading-none"
+              className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#0a1628] mb-4 leading-none"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
@@ -88,7 +88,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}
             >
-              <span className="bg-[#FED43A] text-[#0a1628] font-black text-2xl sm:text-3xl px-4 py-1.5 rounded-xl inline-flex items-center gap-1">
+              <span className="bg-[#FED43A] text-[#0a1628] font-black text-3xl sm:text-4xl px-4 py-1.5 rounded-xl inline-flex items-center gap-1">
                 {displayed}
                 <motion.span
                   animate={{ opacity: [1, 0] }}
@@ -99,7 +99,7 @@ export function Hero() {
             </motion.div>
 
             <motion.p
-              className="text-[#0a1628]/70 mb-8 max-w-lg leading-relaxed text-base"
+              className="text-[#0a1628]/70 mb-8 max-w-lg leading-relaxed text-base font-medium"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
