@@ -63,14 +63,6 @@ export function Projects() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
                 <Card className="overflow-hidden border-primary/20 hover:border-primary/40 transition-all h-full flex flex-col group hover:shadow-lg hover:shadow-primary/10">
-                  <div className="relative h-48 overflow-hidden">
-                    <ImageWithFallback
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  </div>
                   <div className="p-6 flex-1 flex flex-col">
                     <h3 className="text-xl mb-3">{project.title}</h3>
                     <p className="text-muted-foreground mb-4 flex-1 text-sm leading-relaxed">

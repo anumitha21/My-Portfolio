@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import profileImage from "@/imports/image-0.png";
+import resumePDF from "@/imports/Anumitha V.pdf";
 
 export function Hero() {
   return (
@@ -64,9 +65,12 @@ export function Hero() {
                 size="lg"
                 variant="outline"
                 className="border-primary/30 hover:bg-primary/10"
+                asChild
               >
-                <Download className="mr-2 h-4 w-4" />
-                Download CV
+                <a href={resumePDF} download="Anumitha_V_Resume.pdf">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download CV
+                </a>
               </Button>
             </motion.div>
 
@@ -108,7 +112,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="order-1 lg:order-2 flex justify-center"
           >
-            <div className="relative w-80 h-80 mx-auto">
+            <div className="relative w-96 h-96 lg:w-[28rem] lg:h-[28rem] mx-auto">
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl" />
               <img
                 src={profileImage}
