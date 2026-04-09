@@ -2,80 +2,80 @@
 
 :root {
   --font-size: 16px;
-  --background: #4DBBCF;
-  --foreground: #0a1628;
-  --card: #FED43A;
-  --card-foreground: #0a1628;
-  --popover: #FED43A;
-  --popover-foreground: #0a1628;
-  --primary: #0a1628;
-  --primary-foreground: #FED43A;
-  --secondary: #3aa8bc;
-  --secondary-foreground: #0a1628;
-  --muted: #3aa8bc;
-  --muted-foreground: #0d2240;
-  --accent: #FED43A;
-  --accent-foreground: #0a1628;
-  --destructive: #c0392b;
+  --background: #121212;
+  --foreground: #ffffff;
+  --card: #1e1e1e;
+  --card-foreground: #f0f0f0;
+  --popover: #1e1e1e;
+  --popover-foreground: #f0f0f0;
+  --primary: #690092;
+  --primary-foreground: #ffffff;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #f0f0f0;
+  --muted: #1a1a1a;
+  --muted-foreground: #888888;
+  --accent: #690092;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: rgba(10, 22, 40, 0.2);
-  --input: rgba(10, 22, 40, 0.1);
-  --input-background: rgba(10, 22, 40, 0.1);
-  --switch-background: #3aa8bc;
+  --border: rgba(138, 0, 196, 0.25);
+  --input: rgba(138, 0, 196, 0.1);
+  --input-background: #1e1e1e;
+  --switch-background: #2a2a2a;
   --font-weight-medium: 600;
   --font-weight-normal: 400;
-  --ring: #0a1628;
-  --chart-1: #0a1628;
-  --chart-2: #FED43A;
+  --ring: #690092;
+  --chart-1: #690092;
+  --chart-2: #9b33c4;
   --chart-3: #2d8fa0;
   --chart-4: #fec107;
   --chart-5: #1a6e80;
   --radius: 0.75rem;
-  --sidebar: #3aa8bc;
-  --sidebar-foreground: #0a1628;
-  --sidebar-primary: #0a1628;
-  --sidebar-primary-foreground: #FED43A;
-  --sidebar-accent: #FED43A;
-  --sidebar-accent-foreground: #0a1628;
-  --sidebar-border: rgba(10, 22, 40, 0.2);
-  --sidebar-ring: #0a1628;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #690092;
+  --sidebar-accent: #690092;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(138, 0, 196, 0.2);
+  --sidebar-ring: #ffffff;
 }
 
 .dark {
-  --background: #4DBBCF;
-  --foreground: #0a1628;
-  --card: #FED43A;
-  --card-foreground: #0a1628;
-  --popover: #FED43A;
-  --popover-foreground: #0a1628;
-  --primary: #0a1628;
-  --primary-foreground: #FED43A;
-  --secondary: #3aa8bc;
-  --secondary-foreground: #0a1628;
-  --muted: #3aa8bc;
-  --muted-foreground: #0d2240;
-  --accent: #FED43A;
-  --accent-foreground: #0a1628;
-  --destructive: #c0392b;
+  --background: #121212;
+  --foreground: #ffffff;
+  --card: #1e1e1e;
+  --card-foreground: #f0f0f0;
+  --popover: #1e1e1e;
+  --popover-foreground: #f0f0f0;
+  --primary: #690092;
+  --primary-foreground: #ffffff;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #f0f0f0;
+  --muted: #1a1a1a;
+  --muted-foreground: #888888;
+  --accent: #690092;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: rgba(10, 22, 40, 0.2);
-  --input: rgba(10, 22, 40, 0.1);
-  --ring: #0a1628;
+  --border: rgba(138, 0, 196, 0.25);
+  --input: rgba(138, 0, 196, 0.1);
+  --ring: #690092;
   --font-weight-medium: 600;
   --font-weight-normal: 400;
-  --chart-1: #0a1628;
-  --chart-2: #FED43A;
+  --chart-1: #690092;
+  --chart-2: #9b33c4;
   --chart-3: #2d8fa0;
   --chart-4: #fec107;
   --chart-5: #1a6e80;
-  --sidebar: #3aa8bc;
-  --sidebar-foreground: #0a1628;
-  --sidebar-primary: #0a1628;
-  --sidebar-primary-foreground: #FED43A;
-  --sidebar-accent: #FED43A;
-  --sidebar-accent-foreground: #0a1628;
-  --sidebar-border: rgba(10, 22, 40, 0.2);
-  --sidebar-ring: #0a1628;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #690092;
+  --sidebar-accent: #690092;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(138, 0, 196, 0.2);
+  --sidebar-ring: #ffffff;
 }
 
 @theme inline {
@@ -126,11 +126,11 @@
 
   body {
     @apply bg-background text-foreground;
-    background-color: #4DBBCF;
+    background-color: #121212;
     background-image:
-      radial-gradient(ellipse 70% 50% at 15% 0%, rgba(254, 212, 58, 0.18) 0%, transparent 55%),
-      radial-gradient(ellipse 60% 45% at 85% 100%, rgba(10, 22, 40, 0.22) 0%, transparent 55%),
-      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255,255,255, 0.06) 0%, transparent 60%);
+      radial-gradient(ellipse 70% 50% at 15% 0%, rgba(138, 0, 196, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 45% at 85% 100%, rgba(138, 0, 196, 0.22) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(138, 0, 196, 0.04) 0%, transparent 70%);
   }
 
   /* Subtle noise texture over everything */
@@ -196,3 +196,5 @@
     line-height: 1.5;
   }
 }
+
+

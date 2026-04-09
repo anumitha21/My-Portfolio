@@ -3,13 +3,13 @@ import { motion, AnimatePresence, useScroll } from "motion/react";
 import { Menu, X, Home, User, Zap, FolderOpen, Award, BookOpen, Mail } from "lucide-react";
 
 const navItems = [
-  { name: "Home",         href: "#home",         icon: Home },
-  { name: "About",        href: "#about",        icon: User },
-  { name: "Skills",       href: "#skills",       icon: Zap },
-  { name: "Projects",     href: "#projects",     icon: FolderOpen },
+  { name: "Home",           href: "#home",         icon: Home },
+  { name: "About",          href: "#about",        icon: User },
+  { name: "Skills",         href: "#skills",       icon: Zap },
+  { name: "Projects",       href: "#projects",     icon: FolderOpen },
   { name: "Certifications", href: "#certificates", icon: BookOpen },
-  { name: "Achievements", href: "#experience",   icon: Award },
-  { name: "Contact",      href: "#contact",      icon: Mail },
+  { name: "Achievements",   href: "#experience",   icon: Award },
+  { name: "Contact",        href: "#contact",      icon: Mail },
 ];
 
 export function Navigation() {
@@ -21,13 +21,9 @@ export function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      const sections = navItems.map((n) => n.href.slice(1));
-      for (const id of [...sections].reverse()) {
-        const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 120) {
-          setActive(id);
-          break;
-        }
+      for (const item of [...navItems].reverse()) {
+        const el = document.getElementById(item.href.slice(1));
+        if (el && window.scrollY >= el.offsetTop - 120) { setActive(item.href.slice(1)); break; }
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -41,10 +37,9 @@ export function Navigation() {
 
   return (
     <>
-      {/* Scroll progress bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[3px] bg-[#FED43A] origin-left z-[100]"
-        style={{ scaleX: scrollYProgress }}
+        className="fixed top-0 left-0 right-0 h-[3px] origin-left z-[100]"
+        style={{ scaleX: scrollYProgress, background: "linear-gradient(90deg, #690092, #9b33c4)" }}
       />
 
       <motion.nav
@@ -53,27 +48,23 @@ export function Navigation() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#4DBBCF]/90 backdrop-blur-2xl border-b-2 border-[#0a1628]/10 shadow-2xl shadow-[#0a1628]/10"
+            ? "bg-[#121212]/90 backdrop-blur-2xl border-b border-[#690092]/20 shadow-xl shadow-[#690092]/5"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
 
-            {/* Logo */}
             <motion.a
               href="#home"
               onClick={(e) => { e.preventDefault(); scrollToSection("#home"); }}
               whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-2"
+              className="text-lg font-black text-white tracking-wide"
             >
-              <span className="text-lg font-black text-[#0a1628] tracking-wide">
-                Portfolio
-              </span>
+              Port<span className="text-[#690092]">folio</span>
             </motion.a>
 
-            {/* Desktop nav */}
-            <div className="hidden md:flex items-center gap-0.5 bg-[#0a1628]/8 backdrop-blur-sm rounded-2xl px-2 py-1.5 border border-[#0a1628]/10">
+            <div className="hidden md:flex items-center gap-0.5 bg-white/5 rounded-2xl px-2 py-1.5 border border-[#690092]/20">
               {navItems.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = active === item.href.slice(1);
@@ -84,17 +75,17 @@ export function Navigation() {
                     onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
                     initial={{ opacity: 0, y: -15 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.05 * index, duration: 0.4 }}
+                    transition={{ delay: 0.05 * index }}
                     whileHover={{ scale: 1.05 }}
                     className={`relative flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 ${
-                      isActive ? "text-[#0a1628]" : "text-[#0a1628]/60 hover:text-[#0a1628]"
+                      isActive ? "text-white" : "text-white/50 hover:text-white"
                     }`}
                   >
                     {isActive && (
                       <motion.span
                         layoutId="nav-pill"
-                        className="absolute inset-0 bg-[#FED43A] rounded-xl shadow-md"
-                        style={{ zIndex: -1 }}
+                        className="absolute inset-0 rounded-xl"
+                        style={{ background: "linear-gradient(135deg, #690092, #9b33c4)", zIndex: -1 }}
                         transition={{ type: "spring", stiffness: 350, damping: 30 }}
                       />
                     )}
@@ -105,11 +96,10 @@ export function Navigation() {
               })}
             </div>
 
-            {/* Mobile button */}
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden w-9 h-9 flex items-center justify-center rounded-xl bg-[#FED43A] text-[#0a1628] border-2 border-[#0a1628]"
+              className="md:hidden w-9 h-9 flex items-center justify-center rounded-xl bg-[#690092]/20 border border-[#690092]/50 text-white"
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -126,15 +116,14 @@ export function Navigation() {
           </div>
         </div>
 
-        {/* Mobile menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="md:hidden bg-[#4DBBCF]/95 backdrop-blur-xl border-t-2 border-[#0a1628]/10 overflow-hidden"
+              transition={{ duration: 0.3 }}
+              className="md:hidden bg-[#121212]/95 backdrop-blur-xl border-t border-[#690092]/20 overflow-hidden"
             >
               <div className="px-4 py-3 grid grid-cols-2 gap-2">
                 {navItems.map((item, i) => {
@@ -149,9 +138,7 @@ export function Navigation() {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: i * 0.04 }}
                       className={`flex items-center gap-2 px-3 py-2.5 rounded-xl text-sm font-bold transition-all ${
-                        isActive
-                          ? "bg-[#FED43A] text-[#0a1628]"
-                          : "bg-[#0a1628]/8 text-[#0a1628]/80 hover:bg-[#FED43A] hover:text-[#0a1628]"
+                        isActive ? "bg-[#690092] text-white" : "bg-white/5 text-white/70 hover:bg-[#690092]/30 hover:text-white"
                       }`}
                     >
                       <Icon className="h-4 w-4 shrink-0" />
@@ -167,3 +154,5 @@ export function Navigation() {
     </>
   );
 }
+
+

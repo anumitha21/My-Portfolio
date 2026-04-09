@@ -11,45 +11,45 @@ import { Toaster } from "@/app/components/ui/sonner";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#4DBBCF] text-[#0a1628] overflow-x-hidden">
+    <div className="min-h-screen bg-[#121212] text-[#ffffff] overflow-x-hidden">
 
       <Navigation />
       <main>
         <Hero />
         {/* Wave divider */}
-        <div className="bg-[#4DBBCF] overflow-hidden -mb-1">
+        <div className="bg-[#121212] overflow-hidden -mb-1">
           <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
-            <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#FED43A" fillOpacity="0.15" />
+            <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#690092" fillOpacity="0.15" />
           </svg>
         </div>
         <About />
-        <div className="bg-[#4DBBCF] overflow-hidden -mb-1">
+        <div className="bg-[#121212] overflow-hidden -mb-1">
           <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
-            <path d="M0,0 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#3aa8bc" />
+            <path d="M0,0 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#1a1a1a" />
           </svg>
         </div>
         <Skills />
-        <div className="bg-[#3aa8bc] overflow-hidden -mb-1">
+        <div className="bg-[#1a1a1a] overflow-hidden -mb-1">
           <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
-            <path d="M0,20 C360,0 1080,40 1440,20 L1440,40 L0,40 Z" fill="#4DBBCF" />
+            <path d="M0,20 C360,0 1080,40 1440,20 L1440,40 L0,40 Z" fill="#121212" />
           </svg>
         </div>
         <Projects />
-        <div className="bg-[#4DBBCF] overflow-hidden -mb-1">
+        <div className="bg-[#121212] overflow-hidden -mb-1">
           <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
-            <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#4DBBCF" />
+            <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#121212" />
           </svg>
         </div>
         <Experience />
-        <div className="bg-[#4DBBCF] overflow-hidden -mb-1">
+        <div className="bg-[#121212] overflow-hidden -mb-1">
           <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
-            <path d="M0,0 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#3aa8bc" />
+            <path d="M0,0 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#1a1a1a" />
           </svg>
         </div>
         <Certificates />
-        <div className="bg-[#3aa8bc] overflow-hidden -mb-1">
+        <div className="bg-[#1a1a1a] overflow-hidden -mb-1">
           <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
-            <path d="M0,20 C360,0 1080,40 1440,20 L1440,40 L0,40 Z" fill="#4DBBCF" />
+            <path d="M0,20 C360,0 1080,40 1440,20 L1440,40 L0,40 Z" fill="#121212" />
           </svg>
         </div>
         <Contact />
@@ -59,3 +59,5 @@ export default function App() {
     </div>
   );
 }
+
+
