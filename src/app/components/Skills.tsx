@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { Code2, Layers, Database, Cpu, Wrench, Radio, ServerCrash } from "lucide-react";
+import { Code2, Layers, Database, Cpu, Wrench, ServerCrash } from "lucide-react";
 
 const skillCategories = [
   { label: "Languages", icon: Code2, skills: ["Python", "C", "C++"] },
@@ -9,7 +9,6 @@ const skillCategories = [
   { label: "Big Data & Distributed Systems", icon: ServerCrash, skills: ["Apache Spark", "Apache Airflow", "Astronomer Cloud", "DataBricks", "Kafka"] },
   { label: "Core", icon: Cpu, skills: ["DSA", "OOPs", "SQL", "Machine Learning", "NLP", "Generative AI", "AI Agents", "RAG", "Multi-Agent Architecture", "Deep Agents", "Fine Tuning (Basics)"] },
   { label: "Tools & Platforms", icon: Wrench, skills: ["GitHub", "Git", "VS Code", "Postman", "Docker", "LangSmith", "Ollama", "HuggingFace", "n8n", "DataBricks", "AWS"] },
-  { label: "Protocols", icon: Radio, skills: ["MCP", "ACP", "A2A"] },
   { label: "Databases", icon: Database, skills: ["MongoDB", "ChromaDB", "Pinecone", "FAISS"] },
 ];
 

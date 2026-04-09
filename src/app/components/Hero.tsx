@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import profileImage from "@/imports/image-0.png";
 import resumePDF from "@/imports/Anumitha V.pdf";
 
-const roles = ["Passionate AI Engineer", "Aspiring Data Engineer"];
+const ROLE = "Passionate AI & Data Engineer";
 
 export function Hero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -12,25 +12,22 @@ export function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
-  const [roleIndex, setRoleIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const current = roles[roleIndex];
     let timeout: ReturnType<typeof setTimeout>;
-    if (!deleting && displayed.length < current.length) {
-      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 80);
-    } else if (!deleting && displayed.length === current.length) {
-      timeout = setTimeout(() => setDeleting(true), 1800);
+    if (!deleting && displayed.length < ROLE.length) {
+      timeout = setTimeout(() => setDisplayed(ROLE.slice(0, displayed.length + 1)), 75);
+    } else if (!deleting && displayed.length === ROLE.length) {
+      timeout = setTimeout(() => setDeleting(true), 2500);
     } else if (deleting && displayed.length > 0) {
-      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length - 1)), 45);
+      timeout = setTimeout(() => setDisplayed(ROLE.slice(0, displayed.length - 1)), 40);
     } else if (deleting && displayed.length === 0) {
-      setDeleting(false);
-      setRoleIndex((i) => (i + 1) % roles.length);
+      timeout = setTimeout(() => setDeleting(false), 500);
     }
     return () => clearTimeout(timeout);
-  }, [displayed, deleting, roleIndex]);
+  }, [displayed, deleting]);
 
   return (
     <section ref={containerRef} id="home" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden bg-[#4DBBCF]">
@@ -86,7 +83,7 @@ export function Hero() {
             </motion.h1>
 
             <motion.div
-              className="mb-6 h-12 flex items-center"
+              className="mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}

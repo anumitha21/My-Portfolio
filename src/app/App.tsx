@@ -1,4 +1,3 @@
-import { useScroll, motion } from "motion/react";
 import { Hero } from "@/app/components/Hero";
 import { About } from "@/app/components/About";
 import { Skills } from "@/app/components/Skills";
@@ -11,15 +10,8 @@ import { Footer } from "@/app/components/Footer";
 import { Toaster } from "@/app/components/ui/sonner";
 
 export default function App() {
-  const { scrollYProgress } = useScroll();
-
   return (
     <div className="min-h-screen bg-[#4DBBCF] text-[#0a1628] overflow-x-hidden">
-      {/* Scroll progress bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-[#FED43A] origin-left z-[100]"
-        style={{ scaleX: scrollYProgress }}
-      />
 
       <Navigation />
       <main>

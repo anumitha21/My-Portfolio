@@ -13,7 +13,7 @@ export function Footer() {
           transition={{ delay: 0.2 }}
           className="text-[#FED43A]/70 text-sm flex items-center gap-1.5"
         >
-          Built with <Heart className="h-3.5 w-3.5 text-[#FED43A] fill-[#FED43A]" /> by{" "}
+          Built with 😎  by{" "}
           <span className="text-[#FED43A] font-bold">Anumitha V</span>
         </motion.p>
         <motion.p
