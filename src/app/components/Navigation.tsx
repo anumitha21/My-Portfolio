@@ -39,7 +39,7 @@ export function Navigation() {
     <>
       <motion.div
         className="fixed top-0 left-0 right-0 h-[3px] origin-left z-[100]"
-        style={{ scaleX: scrollYProgress, background: "linear-gradient(90deg, #690092, #9b33c4)" }}
+        style={{ scaleX: scrollYProgress, background: "linear-gradient(90deg, #8000b2, #a033cc)" }}
       />
 
       <motion.nav
@@ -48,7 +48,7 @@ export function Navigation() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#121212]/90 backdrop-blur-2xl border-b border-[#690092]/20 shadow-xl shadow-[#690092]/5"
+            ? "bg-[#121212]/90 backdrop-blur-2xl border-b border-[#8000b2]/20 shadow-xl shadow-[#8000b2]/5"
             : "bg-transparent"
         }`}
       >
@@ -61,10 +61,10 @@ export function Navigation() {
               whileHover={{ scale: 1.05 }}
               className="text-lg font-black text-white tracking-wide"
             >
-              Port<span className="text-[#690092]">folio</span>
+              Port<span className="text-[#8000b2]">folio</span>
             </motion.a>
 
-            <div className="hidden md:flex items-center gap-0.5 bg-white/5 rounded-2xl px-2 py-1.5 border border-[#690092]/20">
+            <div className="hidden md:flex items-center gap-0.5 bg-white/5 rounded-2xl px-2 py-1.5 border border-[#8000b2]/20">
               {navItems.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = active === item.href.slice(1);
@@ -85,7 +85,7 @@ export function Navigation() {
                       <motion.span
                         layoutId="nav-pill"
                         className="absolute inset-0 rounded-xl"
-                        style={{ background: "linear-gradient(135deg, #690092, #9b33c4)", zIndex: -1 }}
+                        style={{ background: "linear-gradient(135deg, #8000b2, #a033cc)", zIndex: -1 }}
                         transition={{ type: "spring", stiffness: 350, damping: 30 }}
                       />
                     )}
@@ -99,7 +99,7 @@ export function Navigation() {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden w-9 h-9 flex items-center justify-center rounded-xl bg-[#690092]/20 border border-[#690092]/50 text-white"
+              className="md:hidden w-9 h-9 flex items-center justify-center rounded-xl bg-[#8000b2]/20 border border-[#8000b2]/50 text-white"
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -123,7 +123,7 @@ export function Navigation() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden bg-[#121212]/95 backdrop-blur-xl border-t border-[#690092]/20 overflow-hidden"
+              className="md:hidden bg-[#121212]/95 backdrop-blur-xl border-t border-[#8000b2]/20 overflow-hidden"
             >
               <div className="px-4 py-3 grid grid-cols-2 gap-2">
                 {navItems.map((item, i) => {
@@ -138,7 +138,7 @@ export function Navigation() {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: i * 0.04 }}
                       className={`flex items-center gap-2 px-3 py-2.5 rounded-xl text-sm font-bold transition-all ${
-                        isActive ? "bg-[#690092] text-white" : "bg-white/5 text-white/70 hover:bg-[#690092]/30 hover:text-white"
+                        isActive ? "bg-[#8000b2] text-white" : "bg-white/5 text-white/70 hover:bg-[#8000b2]/30 hover:text-white"
                       }`}
                     >
                       <Icon className="h-4 w-4 shrink-0" />
@@ -154,5 +154,6 @@ export function Navigation() {
     </>
   );
 }
+
 
 

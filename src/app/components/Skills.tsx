@@ -21,7 +21,7 @@ export function Skills() {
     <section id="skills" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#1a1a1a] overflow-hidden">
       <BackgroundEffects />
       <motion.div
-        className="absolute -top-20 -right-20 w-64 h-64 bg-[#690092]/10 rounded-full pointer-events-none"
+        className="absolute -top-20 -right-20 w-64 h-64 bg-[#8000b2]/10 rounded-full pointer-events-none"
         animate={{ rotate: 360 }}
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       />
@@ -36,7 +36,7 @@ export function Skills() {
           <h2 className="text-4xl sm:text-5xl font-black text-[#ffffff] mb-4">
             Technical{" "}
             <motion.span
-              className="bg-[#690092] px-3 rounded-xl inline-block"
+              className="bg-[#8000b2] px-3 rounded-xl inline-block"
               initial={{ scaleX: 0 }}
               animate={isInView ? { scaleX: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -63,8 +63,8 @@ export function Skills() {
                 initial={{ opacity: 0, y: 40, scale: 0.95 }}
                 animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.08, type: "spring", stiffness: 100 }}
-                whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(105,0,146,0.2)" }}
-                className="bg-[#690092] rounded-2xl p-5 border-2 border-[#ffffff]/10 transition-all duration-300 group cursor-default"
+                whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(128,0,178,0.2)" }}
+                className="bg-[#8000b2] rounded-2xl p-5 border-2 border-[#ffffff]/10 transition-all duration-300 group cursor-default"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
@@ -72,7 +72,7 @@ export function Skills() {
                     whileHover={{ rotate: 15, scale: 1.15 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <Icon className="h-4 w-4 text-[#690092]" />
+                    <Icon className="h-4 w-4 text-[#8000b2]" />
                   </motion.div>
                   <h3 className="font-black text-sm text-[#ffffff] uppercase tracking-wide">{cat.label}</h3>
                 </div>
@@ -84,7 +84,7 @@ export function Skills() {
                       animate={isInView ? { opacity: 1, scale: 1 } : {}}
                       transition={{ duration: 0.25, delay: i * 0.07 + j * 0.04, type: "spring" }}
                       whileHover={{ scale: 1.1, y: -2 }}
-                      className="px-3 py-1 text-xs font-bold rounded-full bg-[#ffffff] text-[#690092] cursor-default"
+                      className="px-3 py-1 text-xs font-bold rounded-full bg-[#ffffff] text-[#8000b2] cursor-default"
                     >
                       {skill}
                     </motion.span>
@@ -98,6 +98,7 @@ export function Skills() {
     </section>
   );
 }
+
 
 
 
