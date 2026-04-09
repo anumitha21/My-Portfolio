@@ -61,7 +61,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Passionate about building scalable Data Pipelines and Production AI Systems — pushing the boundaries of Machine Learning and Artificial Intelligence.
+              Passionate about building Production AI Systems and scalable Data Pipelines — pushing the boundaries of data-driven intelligence and agentic architectures.
             </motion.p>
 
             <motion.div
@@ -99,7 +99,7 @@ export function Hero() {
               {[
                 { href: "https://github.com", icon: Github },
                 { href: "https://linkedin.com", icon: Linkedin },
-                { href: "mailto:anumitha5831@gmail.com", icon: Mail },
+               // { href: "mailto:anumitha5831@gmail.com", icon: Mail },
               ].map(({ href, icon: Icon }) => (
                 <a
                   key={href}
