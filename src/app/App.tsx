@@ -1,3 +1,4 @@
+import { useScroll, motion } from "motion/react";
 import { Hero } from "@/app/components/Hero";
 import { About } from "@/app/components/About";
 import { Skills } from "@/app/components/Skills";
@@ -10,16 +11,55 @@ import { Footer } from "@/app/components/Footer";
 import { Toaster } from "@/app/components/ui/sonner";
 
 export default function App() {
+  const { scrollYProgress } = useScroll();
+
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-[#4DBBCF] text-[#0a1628] overflow-x-hidden">
+      {/* Scroll progress bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-[#FED43A] origin-left z-[100]"
+        style={{ scaleX: scrollYProgress }}
+      />
+
       <Navigation />
       <main>
         <Hero />
+        {/* Wave divider */}
+        <div className="bg-[#4DBBCF] overflow-hidden -mb-1">
+          <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
+            <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#FED43A" fillOpacity="0.15" />
+          </svg>
+        </div>
         <About />
+        <div className="bg-[#4DBBCF] overflow-hidden -mb-1">
+          <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
+            <path d="M0,0 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#3aa8bc" />
+          </svg>
+        </div>
         <Skills />
+        <div className="bg-[#3aa8bc] overflow-hidden -mb-1">
+          <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
+            <path d="M0,20 C360,0 1080,40 1440,20 L1440,40 L0,40 Z" fill="#4DBBCF" />
+          </svg>
+        </div>
         <Projects />
+        <div className="bg-[#4DBBCF] overflow-hidden -mb-1">
+          <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
+            <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#4DBBCF" />
+          </svg>
+        </div>
         <Experience />
+        <div className="bg-[#4DBBCF] overflow-hidden -mb-1">
+          <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
+            <path d="M0,0 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#3aa8bc" />
+          </svg>
+        </div>
         <Certificates />
+        <div className="bg-[#3aa8bc] overflow-hidden -mb-1">
+          <svg viewBox="0 0 1440 40" className="w-full block" preserveAspectRatio="none">
+            <path d="M0,20 C360,0 1080,40 1440,20 L1440,40 L0,40 Z" fill="#4DBBCF" />
+          </svg>
+        </div>
         <Contact />
       </main>
       <Footer />
