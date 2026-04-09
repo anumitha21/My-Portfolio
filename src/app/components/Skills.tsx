@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Code2, Layers, Database, Cpu, Wrench, ServerCrash } from "lucide-react";
+import { BackgroundEffects } from "@/app/components/BackgroundEffects";
 
 const skillCategories = [
   { label: "Languages", icon: Code2, skills: ["Python", "C", "C++"] },
@@ -18,6 +19,7 @@ export function Skills() {
 
   return (
     <section id="skills" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#3aa8bc] overflow-hidden">
+      <BackgroundEffects variant="dark" />
       <motion.div
         className="absolute -top-20 -right-20 w-64 h-64 bg-[#FED43A]/10 rounded-full pointer-events-none"
         animate={{ rotate: 360 }}

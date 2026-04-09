@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Award, Code } from "lucide-react";
+import { BackgroundEffects } from "@/app/components/BackgroundEffects";
 
 const experiences = [
   {
@@ -40,6 +41,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#4DBBCF] overflow-hidden">
+      <BackgroundEffects variant="teal" />
       <motion.div
         className="absolute top-0 right-0 w-56 h-56 bg-[#FED43A]/10 rounded-full pointer-events-none"
         animate={{ scale: [1, 1.3, 1] }}

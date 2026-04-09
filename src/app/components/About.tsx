@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef, useState } from "react";
 import { GraduationCap, Users, Lightbulb } from "lucide-react";
+import { BackgroundEffects } from "@/app/components/BackgroundEffects";
 
 const softSkills = ["Collaboration", "Communication", "Problem-Solving", "Creative Thinking"];
 
@@ -27,7 +28,8 @@ export function About() {
 
   return (
     <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#4DBBCF] overflow-hidden">
-      {/* Decorative shapes */}
+      <BackgroundEffects variant="teal" />
+      {/* existing decorative shapes stay */}
       <motion.div
         className="absolute top-10 right-10 w-32 h-32 bg-[#FED43A]/20 rounded-full pointer-events-none"
         animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}

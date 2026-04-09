@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { BookOpen } from "lucide-react";
+import { BackgroundEffects } from "@/app/components/BackgroundEffects";
 
 const certificates = [
   {
@@ -35,6 +36,7 @@ export function Certificates() {
 
   return (
     <section id="certificates" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#3aa8bc] overflow-hidden">
+      <BackgroundEffects variant="dark" />
       <motion.div
         className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#FED43A]/10 rounded-full pointer-events-none"
         animate={{ rotate: 360 }}

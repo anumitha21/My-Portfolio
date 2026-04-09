@@ -3,6 +3,7 @@ import { Github, Linkedin, Download, ArrowDown } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 import profileImage from "@/imports/image-0.png";
 import resumePDF from "@/imports/Anumitha V.pdf";
+import { BackgroundEffects } from "@/app/components/BackgroundEffects";
 
 const ROLE = "Passionate AI & Data Engineer";
 
@@ -32,32 +33,7 @@ export function Hero() {
   return (
     <section ref={containerRef} id="home" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden bg-[#4DBBCF]">
 
-      {/* Animated background orbs */}
-      <motion.div style={{ y }} className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute top-[10%] left-[8%] w-80 h-80 rounded-full opacity-20"
-          style={{ background: "radial-gradient(circle, #FED43A, transparent 70%)" }}
-          animate={{ scale: [1, 1.2, 1], x: [0, 30, 0], y: [0, -20, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-[15%] right-[10%] w-64 h-64 rounded-full opacity-15"
-          style={{ background: "radial-gradient(circle, #0a1628, transparent 70%)" }}
-          animate={{ scale: [1, 1.3, 1], x: [0, -25, 0], y: [0, 30, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
-        <motion.div
-          className="absolute top-[55%] left-[55%] w-48 h-48 rounded-full opacity-10"
-          style={{ background: "radial-gradient(circle, #FED43A, transparent 70%)" }}
-          animate={{ scale: [1, 1.4, 1] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        />
-      </motion.div>
-
-      {/* Dot grid */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.07]"
-        style={{ backgroundImage: "radial-gradient(#0a1628 1px, transparent 1px)", backgroundSize: "28px 28px" }}
-      />
+      <BackgroundEffects variant="teal" />
 
       <motion.div style={{ opacity }} className="relative max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

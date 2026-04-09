@@ -3,6 +3,7 @@ import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Mail, Linkedin, Github, Download } from "lucide-react";
 import resumePDF from "@/imports/Anumitha V.pdf";
+import { BackgroundEffects } from "@/app/components/BackgroundEffects";
 
 const links = [
   { label: "Gmail", value: "anumitha5831@gmail.com", href: "mailto:anumitha5831@gmail.com", icon: Mail },
@@ -16,6 +17,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#4DBBCF] overflow-hidden">
+      <BackgroundEffects variant="teal" />
       <motion.div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FED43A]/10 rounded-full pointer-events-none"
         animate={{ scale: [1, 1.2, 1] }}

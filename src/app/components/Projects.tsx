@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Github, ExternalLink } from "lucide-react";
+import { BackgroundEffects } from "@/app/components/BackgroundEffects";
 
 const projects = [
   {
@@ -30,6 +31,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#4DBBCF] overflow-hidden">
+      <BackgroundEffects variant="teal" />
       <motion.div
         className="absolute bottom-0 left-0 w-72 h-72 bg-[#FED43A]/10 rounded-full pointer-events-none"
         animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
