@@ -18,8 +18,8 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
-        <Certificates />
         <Experience />
+        <Certificates />
         <Contact />
       </main>
       <Footer />

@@ -2,27 +2,29 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Card } from "@/app/components/ui/card";
-import { Award } from "lucide-react";
+import { BookOpen } from "lucide-react";
 
 const certificates = [
   {
-    title: "Certificate Name 1",
-    organization: "Issuing Organization",
-    period: "2024",
-    description: "Brief description of what this certificate represents and the skills or knowledge gained.",
-  },
+    title: "Data Science, Machine Learning, Deep Learning & NLP Bootcamp",
+    organization: "Udemy — Krish Naik",
+    period: "2025",
+     },
   {
-    title: "Certificate Name 2",
-    organization: "Issuing Organization",
-    period: "2024",
-    description: "Brief description of what this certificate represents and the skills or knowledge gained.",
-  },
+    title: "Complete Agentic AI Bootcamp With LangGraph and LangChain Generative",
+    organization: "Udemy",
+    period: "2025",
+    },
   {
-    title: "Certificate Name 3",
-    organization: "Issuing Organization",
-    period: "2023",
-    description: "Brief description of what this certificate represents and the skills or knowledge gained.",
-  },
+    title: "AI for Everyone — Generative AI Learning Path",
+    organization: "Coursera — Andrew Ng (Google Cloud)",
+    period: "2025",
+     },
+  {
+    title: "Mastering Data Structures and Algorithms using C",
+    organization: "Google & Udemy",
+    period: "2025",
+     },
 ];
 
 export function Certificates() {
@@ -39,12 +41,11 @@ export function Certificates() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl sm:text-5xl mb-4 text-center">
-            <span className="text-primary">Certificates</span>
+            <span className="text-primary">Certifications</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-12" />
 
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20 hidden md:block" />
 
             <div className="space-y-8">
@@ -56,13 +57,12 @@ export function Certificates() {
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   className="relative"
                 >
-                  {/* Timeline dot */}
                   <div className="absolute left-6 top-6 w-5 h-5 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
 
                   <Card className="md:ml-20 p-6 bg-card border-primary/20 hover:border-primary/40 transition-all group hover:scale-105 duration-300">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                        <Award className="h-6 w-6 text-primary" />
+                      <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors shrink-0">
+                        <BookOpen className="h-6 w-6 text-primary" />
                       </div>
                       <div className="flex-1">
                         <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
@@ -70,9 +70,7 @@ export function Certificates() {
                           <span className="text-sm text-muted-foreground">{cert.period}</span>
                         </div>
                         <p className="text-primary mb-2">{cert.organization}</p>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {cert.description}
-                        </p>
+                         
                       </div>
                     </div>
                   </Card>
