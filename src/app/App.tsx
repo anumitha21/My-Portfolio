@@ -1,10 +1,10 @@
 import { Hero } from "@/app/components/Hero";
-import { Stats } from "@/app/components/Stats";
 import { About } from "@/app/components/About";
-import { Skills } from "@/app/components/Skills";
-import { Certificates } from "@/app/components/Certificates";
 import { Projects } from "@/app/components/Projects";
+import { HowIWork } from "@/app/components/HowIWork";
+import { BeyondStack } from "@/app/components/BeyondStack";
 import { Experience } from "@/app/components/Experience";
+import { Certificates } from "@/app/components/Certificates";
 import { Contact } from "@/app/components/Contact";
 import { Navigation } from "@/app/components/Navigation";
 import { Footer } from "@/app/components/Footer";
@@ -29,16 +29,23 @@ export default function App() {
       <CustomCursor />
       <Navigation />
       <main>
+        {/* Primary narrative sections */}
         <Hero />
-        <Stats />
         <About />
-        <Divider from="bg-[#FAFAF8]" to="bg-[#EAF5F6]" />
-        <Skills />
-        <Divider from="bg-[#EAF5F6]" to="bg-[#FAFAF8]" />
+        <Divider from="bg-[#FAFAF8]" to="bg-[#FAFAF8]" />
         <Projects />
-        <Experience />
         <Divider from="bg-[#FAFAF8]" to="bg-[#EAF5F6]" />
+        <HowIWork />
+        <Divider from="bg-[#EAF5F6]" to="bg-[#FAFAF8]" />
+        <BeyondStack />
+
+        {/* Recruiter-facing sections — kept below narrative */}
+        <Divider from="bg-[#FAFAF8]" to="bg-[#EAF5F6]" />
+        <Experience />
+        <Divider from="bg-[#EAF5F6]" to="bg-[#FAFAF8]" />
         <Certificates />
+
+        <Divider from="bg-[#FAFAF8]" to="bg-[#EAF5F6]" />
         <Contact />
       </main>
       <Footer />

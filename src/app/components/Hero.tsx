@@ -7,7 +7,7 @@ import { BackgroundEffects } from "@/app/components/BackgroundEffects";
 import { GeometricMesh } from "@/app/components/GeometricMesh";
 import { Magnetic } from "@/app/components/Magnetic";
 
-const ROLE = "Passionate AI Engineer";
+const ROLES = ["Passionate AI Engineer", "Systems Thinker", "Curious Generalist"];
 
 export function Hero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -16,20 +16,24 @@ export function Hero() {
 
   const [displayed, setDisplayed] = useState("");
   const [deleting, setDeleting] = useState(false);
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  const currentRole = ROLES[roleIndex];
 
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout>;
-    if (!deleting && displayed.length < ROLE.length) {
-      timeout = setTimeout(() => setDisplayed(ROLE.slice(0, displayed.length + 1)), 75);
-    } else if (!deleting && displayed.length === ROLE.length) {
-      timeout = setTimeout(() => setDeleting(true), 2500);
+    if (!deleting && displayed.length < currentRole.length) {
+      timeout = setTimeout(() => setDisplayed(currentRole.slice(0, displayed.length + 1)), 72);
+    } else if (!deleting && displayed.length === currentRole.length) {
+      timeout = setTimeout(() => setDeleting(true), 2200);
     } else if (deleting && displayed.length > 0) {
-      timeout = setTimeout(() => setDisplayed(ROLE.slice(0, displayed.length - 1)), 40);
+      timeout = setTimeout(() => setDisplayed(currentRole.slice(0, displayed.length - 1)), 38);
     } else if (deleting && displayed.length === 0) {
-      timeout = setTimeout(() => setDeleting(false), 500);
+      setRoleIndex((i) => (i + 1) % ROLES.length);
+      setDeleting(false);
     }
     return () => clearTimeout(timeout);
-  }, [displayed, deleting]);
+  }, [displayed, deleting, currentRole]);
 
   return (
     <section ref={containerRef} id="home" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-24 overflow-hidden bg-[#FAFAF8]">
@@ -73,31 +77,32 @@ export function Hero() {
             </motion.h1>
 
             <motion.div
-              className="mb-6"
+              className="mb-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <span
-                className="bg-[#0e7490] text-white font-black text-3xl sm:text-4xl px-4 py-1.5 inline-flex items-center gap-1"
+                className="bg-[#0e7490] text-white font-black text-2xl sm:text-3xl px-4 py-1.5 inline-flex items-center gap-1 min-w-[260px]"
                 style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 14px 100%, 0 calc(100% - 14px))" }}
               >
                 {displayed}
                 <motion.span
                   animate={{ opacity: [1, 0] }}
                   transition={{ duration: 0.5, repeat: Infinity }}
-                  className="inline-block w-0.5 h-7 bg-[#ffffff] ml-0.5"
+                  className="inline-block w-0.5 h-6 bg-[#ffffff] ml-0.5 shrink-0"
                 />
               </span>
             </motion.div>
 
+            {/* One-liner hook */}
             <motion.p
               className="text-[#4A4456] mb-8 max-w-lg leading-relaxed text-base font-medium"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Passionate about building scalable Data Pipelines and Production AI Systems — pushing the boundaries of Machine Learning and Artificial Intelligence.
+              I build AI systems that work in the real world — and ask questions about everything else.
             </motion.p>
 
             <motion.div

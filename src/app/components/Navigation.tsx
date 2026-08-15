@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll } from "motion/react";
-import { Menu, X, Home, User, Zap, FolderOpen, Award, BookOpen, Mail } from "lucide-react";
+import { Menu, X, Home, User, Zap, FolderOpen, BookOpen, Mail } from "lucide-react";
 
 const navItems = [
-  { name: "Home",           href: "#home",         icon: Home },
-  { name: "About",          href: "#about",        icon: User },
-  { name: "Skills",         href: "#skills",       icon: Zap },
-  { name: "Projects",       href: "#projects",     icon: FolderOpen },
-  { name: "Certifications", href: "#certificates", icon: BookOpen },
-  { name: "Achievements",   href: "#experience",   icon: Award },
-  { name: "Contact",        href: "#contact",      icon: Mail },
+  { name: "Home",       href: "#home",     icon: Home },
+  { name: "About",      href: "#about",    icon: User },
+  { name: "Projects",   href: "#projects", icon: FolderOpen },
+  { name: "How I Work", href: "#howork",   icon: Zap },
+  { name: "Beyond",     href: "#beyond",   icon: BookOpen },
+  { name: "Contact",    href: "#contact",  icon: Mail },
 ];
 
 export function Navigation() {
