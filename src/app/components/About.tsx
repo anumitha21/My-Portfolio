@@ -70,16 +70,15 @@ export function About() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`relative px-5 py-2.5 text-sm font-bold transition-all duration-200 flex items-center gap-2 ${
                   activeTab === tab.id
-                    ? "text-white"
+                    ? "text-[#0e7490]"
                     : "text-[#211C2B]/55 hover:text-[#0e7490]"
                 }`}
               >
                 {activeTab === tab.id && (
                   <motion.span
-                    layoutId="about-tab-bg"
-                    className="absolute inset-0 bg-[#0e7490]"
+                    layoutId="about-tab-underline"
+                    className="absolute bottom-0 left-2 right-2 h-0.5 bg-[#0e7490]"
                     transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                    style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%)" }}
                   />
                 )}
                 <span className="relative z-10">{tab.emoji}</span>

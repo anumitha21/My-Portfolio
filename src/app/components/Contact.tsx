@@ -33,22 +33,24 @@ export function Contact() {
           {links.map((item, i) => {
             const Icon = item.icon;
             return (
-              <motion.a key={item.label} href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer"
-                initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.2 + i * 0.1, type: "spring", stiffness: 100 }}
-                whileHover={{ x: 8, boxShadow: "0 10px 26px rgba(14, 116, 144,0.16)" }}
-                style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 14px 100%, 0 calc(100% - 14px))" }}
-                className="flex items-center gap-4 p-4 bg-white border border-[#0e7490]/10 hover:border-[#0e7490]/35 group transition-all shadow-sm"
-              >
-                <motion.div className="p-2.5 bg-[#0e7490]" style={{ clipPath: "polygon(50% 0, 100% 50%, 50% 100%, 0 50%)" }} whileHover={{ rotate: 90, scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Icon className="h-5 w-5 text-white" />
-                </motion.div>
-                <div className="text-left">
-                  <p className="text-xs font-black text-[#211C2B]/40 uppercase tracking-widest">{item.label}</p>
-                  <p className="text-sm font-bold text-[#211C2B]/85 group-hover:text-[#0e7490] transition-colors">{item.value}</p>
-                </div>
-              </motion.a>
+              <Magnetic key={item.label} strength={0.15} className="block w-full">
+                <motion.a href={item.href}
+                  target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer"
+                  initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.2 + i * 0.1, type: "spring", stiffness: 100 }}
+                  whileHover={{ x: 8, boxShadow: "0 10px 26px rgba(14, 116, 144,0.16)" }}
+                  style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 14px 100%, 0 calc(100% - 14px))" }}
+                  className="flex items-center gap-4 p-4 bg-white border border-[#0e7490]/10 hover:border-[#0e7490]/35 group transition-all shadow-sm"
+                >
+                  <motion.div className="p-2.5 bg-[#0e7490]" style={{ clipPath: "polygon(50% 0, 100% 50%, 50% 100%, 0 50%)" }} whileHover={{ rotate: 90, scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
+                    <Icon className="h-5 w-5 text-white" />
+                  </motion.div>
+                  <div className="text-left">
+                    <p className="text-xs font-black text-[#211C2B]/40 uppercase tracking-widest">{item.label}</p>
+                    <p className="text-sm font-bold text-[#211C2B]/85 group-hover:text-[#0e7490] transition-colors">{item.value}</p>
+                  </div>
+                </motion.a>
+              </Magnetic>
             );
           })}
 
