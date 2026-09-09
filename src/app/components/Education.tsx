@@ -8,7 +8,7 @@ const educationData = [
     degree: "B.E. Computer Science and Engineering",
     institution: "Sri Eshwar College of Engineering",
     period: "2024 - 2028",
-    grade: "CGPA: 8.1",
+    grade: "CGPA: 8.2",
   
   },
   {

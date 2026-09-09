@@ -39,7 +39,7 @@ export function About() {
         >
           <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#0e7490] to-[#06b6d4] pointer-events-none" />
           <div className="relative space-y-5 pl-3">
-            <p className="text-[#4A4456] text-lg leading-relaxed">I'm a 3rd yer=arComputer Science undergraduate focused on building real-world AI systems that integrate Artificial Intelligence, Data Engineering, and strong product thinking. I specialize in developing end-to-end applications such as RAG-based systems, Agentic workflows, and intelligent platforms — working across the full pipeline from data processing and retrieval to reasoning and final outputs.</p>
+            <p className="text-[#4A4456] text-lg leading-relaxed">I'm a 3rd year Computer Science undergraduate focused on building real-world AI systems that integrate Artificial Intelligence, Data Engineering, and strong product thinking. I specialize in developing end-to-end applications such as RAG-based systems, Agentic workflows, and intelligent platforms — working across the full pipeline from data processing and retrieval to reasoning and final outputs.</p>
             <p className="text-[#4A4456] text-lg leading-relaxed">Beyond engineering, I bring a strong sense of design and user experience into my work, aiming to create products that are not only functional but also intuitive and engaging. I'm currently deepening my expertise in data engineering and advanced AI architectures, with a focus on building production-ready systems that deliver meaningful real-world value.</p>
           </div>
         </TiltCard>
